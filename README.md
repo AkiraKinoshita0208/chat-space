@@ -18,8 +18,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer||
-|users_id|reference|null: false, foreign_key: true|
-|groups_id|reference|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
+|group_id|reference|null: false, foreign_key: true|
 ### association
 - belongs_to :user
 - belongs_to :group
@@ -38,6 +38,8 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer||
+|user_id|reference|null: false, foreign_key: true|
+|group_id|reference|null: false, foreign_key: true|
 |text|text||
 |image|string||
 |created_at|string||
