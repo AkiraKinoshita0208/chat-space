@@ -1,0 +1,28 @@
+.chat-main
+  .chat-header
+    .chat-header__container
+      .group-name group-name
+      .group-members Member :
+    .chat-header__edit-btn
+      = link_to "Edit"
+  .chat-body
+    .chat-body__container
+      .post-info
+        .posted-user posted-user
+        .created-at created-at
+      .posted-message おはよう
+    .chat-body__container
+      .post-info
+        .posted-user posted-user
+        .created-at created-at
+      .posted-message こんばんは
+  .chat-footer
+    .chat-footer__container
+      .message-box
+        %form
+          %input.message{ placeholder: "Type a message"}
+        %label{class: "image"}
+          = icon('far', 'image')
+          %input{ type: "file"}
+      .send-btn
+        = link_to "Send"
