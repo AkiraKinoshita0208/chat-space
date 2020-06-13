@@ -1,0 +1,16 @@
+.side-bar
+  .side-header
+    .side-header__container
+      %p.user-name user-name
+      %ul.icons
+        = link_to "#", class: "create-group" do
+          = icon('far', 'edit')
+        = link_to "#", class: "edit-account" do
+          = icon('fas', 'cog')
+  .side-body
+    .side-body__container
+      %p.group-name group-name
+      %p.latest-message latest-message
+    .side-body__container
+      %p.group-name group-name
+      %p.latest-message latest-message
