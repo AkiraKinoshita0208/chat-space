@@ -1,11 +1,12 @@
 .side-bar
   .side-header
     .side-header__container
-      %p.user-name user-name
+      %p.user-name
+        = current_user.name
       %ul.icons
         = link_to "#", class: "create-group" do
           = icon('far', 'edit')
-        = link_to "#", class: "edit-account" do
+        = link_to edit_user_path(current_user), class: "edit-account" do
           = icon('fas', 'cog')
   .side-body
     .side-body__container
