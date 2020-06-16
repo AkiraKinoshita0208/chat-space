@@ -27,7 +27,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|id|integer||
+|id|integer|index: true|
 |name|string|null: false, unique: true|
 ### association
 - has_many :users_groups
