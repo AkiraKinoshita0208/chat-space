@@ -6,7 +6,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|index: true|
-|name|string|null: false, unique: true|
+|name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
 ### association
@@ -34,7 +34,7 @@
 - has_many :users, through: :users_groups
 - has_many :posts
 
-## postsテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer||

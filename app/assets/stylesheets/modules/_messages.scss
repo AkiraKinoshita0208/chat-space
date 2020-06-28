@@ -100,10 +100,10 @@
   }
   .chat-body {
     background-color: #fafafa;
-    height: calc(100vh - 190px);
+
     &__container {
       padding-top: 35px;
-      margin: 0 0 46px 40px;
+      margin: 0 0 46px 20px;
       .post-info {
         display: flex;
         .user-name {
@@ -123,6 +123,10 @@
     }
   }
   .chat-footer {
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    width: calc(100vw - 300px);
     background-color: #ddd;
     height: 90px;
     padding: 20px 40px;
@@ -131,13 +135,13 @@
       .message-box {
         position: relative;
         width: 100%;
-        .message {
+        .form__message {
           height: 50px;
           width: 100%;
           padding: 0 40px 0 10px;
           border-style: none;
         }
-        label {
+        .form__mask__image {
           font-size: 1.3rem;
           position: absolute;
           right: 10px;
@@ -148,7 +152,7 @@
           }
           }
         }
-      .send-btn {
+      .form__submit {
         height: 50px;
         line-height: 50px;
         width: 100px;

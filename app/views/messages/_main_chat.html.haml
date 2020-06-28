@@ -1,28 +1,25 @@
 .chat-main
   .chat-header
     .chat-header__container
-      .group-name group-name
-      .group-members Member :
+      .group-name
+        = @group.name
+      .group-members
+        - @members.each do |member|
+          = member.name
     .chat-header__edit-btn
-      = link_to "Edit"
+      = link_to "Edit", edit_group_path(params[:group_id]), method: :get
   .chat-body
     .chat-body__container
-      .post-info
-        .posted-user posted-user
-        .created-at created-at
-      .posted-message おはよう
-    .chat-body__container
-      .post-info
-        .posted-user posted-user
-        .created-at created-at
-      .posted-message こんばんは
+      .posted-message
+        = render @messages
   .chat-footer
     .chat-footer__container
       .message-box
-        %form
-          %input.message{ placeholder: "Type a message"}
-        %label{class: "image"}
-          = icon('far', 'image')
-          %input{ type: "file"}
-      .send-btn
-        = link_to "Send"
+        .form
+          = form_for [@group, @message] do |f|
+            = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+            .form__mask
+              = f.label :image, class: 'form__mask__image' do
+                = icon('fas', 'image', class: 'icon')
+                = f.file_field :image, class: 'hidden'
+              = f.submit 'Send', class: 'form__submit'

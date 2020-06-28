@@ -1,5 +1,5 @@
 @import "reset";
-@import "config/colors";
+@import "config/colors"; //colors.scssには、他のscssで利用している色についての変数が定義されているため、reset.scssの直後で読み込むこと
 @import "modules/messages";
 @import "font-awesome-sprockets";
 @import "font-awesome";
