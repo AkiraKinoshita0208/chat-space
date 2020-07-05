@@ -8,10 +8,12 @@
           = member.name
     .chat-header__edit-btn
       = link_to "Edit", edit_group_path(params[:group_id]), method: :get
+
   .chat-body
-    .chat-body__container
-      .posted-message
-        = render @messages
+    -# .chat-body__container
+    -#   .posted-message
+    = render @messages
+
   .chat-footer
     .chat-footer__container
       .message-box
