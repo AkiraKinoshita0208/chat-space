@@ -1,11 +1,11 @@
-.chat-body
-  .chat-body__container
-    .poster-user
+.chat-body__container
+  .post-info
+    .user-name
       = message.user.name
     .created-at
       = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
-    .posted-message
-      - if message.content.present?
-        %p.posted-message__content
-          = message.content
-      = image_tag message.image.url, class: 'posted-message__image' if message.image.present?
+  .posted-message
+    - if message.content.present?
+      %p.posted-message__content
+        = message.content
+    = image_tag message.image.url, class: 'posted-message__image' if message.image.present?
