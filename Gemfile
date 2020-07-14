@@ -43,6 +43,11 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'capybara'
+  gem 'capistrano' #capistranoインストール時に追記した
+  gem 'capistrano-rbenv' #capistranoインストール時に追記した
+  gem 'capistrano-bundler' #capistranoインストール時に追記した
+  gem 'capistrano-rails' #capistranoインストール時に追記した
+  gem 'capistrano3-unicorn' #capistranoインストール時に追記した
 end
 
 group :development do
