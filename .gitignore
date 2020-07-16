@@ -18,3 +18,6 @@
 
 # 画像がGithubにコミットされないように下記を追記した
 public/uploads/*
+
+# secrets.ymlをgithubにプッシュ不可とするため下記を記載した
+config/secrets.yml
